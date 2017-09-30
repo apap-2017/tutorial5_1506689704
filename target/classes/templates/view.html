@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>View Student by NPM</title>
+    </head>
+    <body>
+ 
+    <form th:object="${student}">
+       	<H3 th:text="'NPM = ' + ${student.npm}" th:field="*{npm}">Student NPM</H3>
+       	<h3 th:text="'Name = ' + ${student.name}" th:field="*{name}">Student Name</h3>
+       	<h3 th:text="'GPA = ' + ${student.gpa}" th:field="*{gpa}">Student GPA</h3>
+       	</form>
+    </body>
+</html>
+
