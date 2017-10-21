@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
+    	<link rel = "stylesheet" href = "/css/bootstrap.min.css"/>
         <title>View Course by id course</title>
     </head>
     <body>
+    	<div th:replace="fragments/fragment :: header"></div>
  		<form th:object="${course}">
        	<H3 th:text="'ID = ' + ${course.id_course}">Course id</H3>
        	<h3 th:text="'Name = ' + ${course.name}">Course name</h3>
@@ -15,6 +17,7 @@
       		
       	</li>
       </ul>
+      <div th:replace="fragments/fragment :: footer"></div>
     </body>
 </html>
 

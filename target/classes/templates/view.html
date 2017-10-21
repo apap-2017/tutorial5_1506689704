@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
+    	<link rel = "stylesheet" href = "/css/bootstrap.min.css"/>
         <title>View Student by NPM</title>
     </head>
     <body>
+    	<div th:replace="fragments/fragment :: header"></div>
  
     <form th:object="${student}">
        	<H3 th:text="'NPM = ' + ${student.npm}" th:field="*{npm}">Student NPM</H3>
@@ -16,6 +18,7 @@
       		Nama kuliah-X sks
       	</li>
       </ul>
+      <div th:replace="fragments/fragment :: footer"></div>
     </body>
 </html>
 
